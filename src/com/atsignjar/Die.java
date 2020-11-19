@@ -12,12 +12,11 @@ public class Die {
     }
 
     public void roll (Random rand) {
-        value = rand.nextInt(sides) + 1; //1 - 6
-
+        this.value = rand.nextInt(sides) + 1; //1 - 6
     }
 
     public int getValue(){
-        return value;
+        return this.value;
     }
 
 

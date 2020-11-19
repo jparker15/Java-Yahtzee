@@ -9,9 +9,12 @@ public class Main {
 
         Die die = new Die ();
         Random rand = new Random();
+        Cup cup = new Cup (5);
 
-        die.roll(rand);
-        System.out.println(die);
+        cup.roll(rand);
+        System.out.println(cup);
+        cup.roll(rand, Input.getChoice());
+        System.out.println(cup);
 
 
     }

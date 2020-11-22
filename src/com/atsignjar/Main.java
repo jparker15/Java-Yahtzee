@@ -16,6 +16,10 @@ public class Main {
         cup.roll(rand, Input.getChoice());
         System.out.println(cup);
 
+        while (true){
+            
+        }
+
 
     }
 }

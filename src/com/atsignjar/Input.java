@@ -1,6 +1,7 @@
 package com.atsignjar;
 
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Input {
@@ -21,5 +22,18 @@ public class Input {
             System.out.println("enter a value between 1 and 5");
         }
         return choice - 1;
+    }
+
+    static public ArrayList<Integer> getChoices(){
+        ArrayList<Integer> choices = new ArrayList<>();
+
+        System.out.println("Choose a dice to re-roll?");
+        String input = scanner.nextLine();
+        String[] inputArray = input.split(" ");
+        for (String number: inputArray){
+            choices.add(Integer.parseInt(number) -1 );
+        }
+
+        return choices;
     }
 }

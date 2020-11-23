@@ -13,11 +13,16 @@ public class Main {
 
         cup.roll(rand);
         System.out.println(cup);
-        cup.roll(rand, Input.getChoice());
-        System.out.println(cup);
+
 
         while (true){
-            
+            cup.roll(rand, Input.getChoice());
+            if(Input.getChoice() > 0 && Input.getChoice() <= 5){
+                System.out.println(cup);
+                break;
+            }
+            System.out.println("please enter a value between 1 and 5 ");
+
         }
 
 

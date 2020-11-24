@@ -11,6 +11,8 @@ public class Input {
     static public void welcome(){
         System.out.println("Welcome.\n Yahtzeeee!");
     }
+
+    //TODO: add try catch add exceptions // parseInt
     static public int getChoice(){
         int choice;
         while (true){

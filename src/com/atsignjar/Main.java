@@ -16,7 +16,7 @@ public class Main {
 //        cup.roll(rand, Input.getChoices());
 //        System.out.println(cup);
 
-       cup.roll(rand, Input.getChoice());
+       cup.roll(rand, Input.getChoices());
         System.out.println(cup);
     }
 }

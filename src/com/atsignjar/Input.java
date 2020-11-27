@@ -9,7 +9,7 @@ public class Input {
     static Scanner scanner = new Scanner(System.in);
 
     static public void welcome(){
-        System.out.println("Welcome.\n Yahtzeeee!");
+        System.out.println("Welcome.\n !Yahtzeeee");
     }
 
     //TODO: add try catch add exceptions // parseInt
@@ -29,11 +29,14 @@ public class Input {
     static public ArrayList<Integer> getChoices(){
         ArrayList<Integer> choices = new ArrayList<>();
 
-        System.out.println("Choose a dice to re-roll?");
-        String input = scanner.nextLine();
-        String[] inputArray = input.split(" ");
-        for (String number: inputArray){
-            choices.add(Integer.parseInt(number) -1 );
+
+        while(true){
+            System.out.println("Choose numbers of dice to re-roll?");
+            String input = scanner.nextLine();
+            String[] inputArray = input.split(" ");
+            for (String number: inputArray){
+                choices.add(Integer.parseInt(number) -1 );
+            }
         }
 
         return choices;

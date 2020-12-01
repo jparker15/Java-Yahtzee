@@ -12,14 +12,24 @@ public class Input {
     protected static Random rand = new Random();
 
     static public void welcome(){
-        System.out.println("Welcome to Yahztee! \nWould you like to play?");
-        String answer = scanner.nextLine();
-        if(answer.toLowerCase().contains("n")){
-            System.exit(0);
+
+        while(true){
+            System.out.println("Welcome to Yahztee! \nWould you like to play?");
+            String answer = scanner.nextLine();
+            if(answer.toLowerCase().contains("n")){
+                break;
+            }
+            System.out.println("First Hand:");
+            cup.roll(rand);
+            System.out.println(cup);
+            System.out.println("Would you like to re-roll your hand?");
+            String reroll = scanner.nextLine();
+            if(reroll.toLowerCase().contains("n")){
+                break;
+            }
+            cup.roll(rand);
+            System.out.println(cup);
         }
-        System.out.println("First Hand:");
-        cup.roll(rand);
-        System.out.println(cup);
 
 
     }

@@ -27,8 +27,17 @@ public class Input {
             if(reroll.toLowerCase().contains("n")){
                 break;
             }
-            cup.roll(rand);
+            getChoices();
             System.out.println(cup);
+            System.out.println("Would you like to re-roll a specific die?");
+            String singleroll = scanner.nextLine();
+            if(singleroll.toLowerCase().contains("n")){
+                break;
+            }
+            getChoice();
+
+
+
         }
 
 

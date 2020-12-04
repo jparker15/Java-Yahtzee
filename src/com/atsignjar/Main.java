@@ -10,10 +10,10 @@ public class Main {
         Die die = new Die ();
         Random rand = new Random();
         Cup cup = new Cup (5);
-        Input inp = new Input();
 
 
-        inp.welcome();
+
+        Input.welcome();
 //        cup.roll(rand);
 //        System.out.println(cup);
 ////        cup.roll(rand, Input.getChoices());

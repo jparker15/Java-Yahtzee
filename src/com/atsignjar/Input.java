@@ -19,29 +19,47 @@ public class Input {
             if(answer.toLowerCase().contains("n")){
                 break;
             }
+            Input.demo();
+        }
+
+    }
+
+    static public void demo(){
+
+        while(true) {
             System.out.println("First Hand:");
             cup.roll(rand);
             System.out.println(cup);
             System.out.println("Would you like to re-roll your hand?");
             String reroll = scanner.nextLine();
-            if(reroll.toLowerCase().contains("n")){
-                break;
+            if (reroll.toLowerCase().contains("y")) {
+                cup.roll(rand);
+                System.out.println(reroll);
+//                continue;
             }
-            getChoices();
             System.out.println(cup);
             System.out.println("Would you like to re-roll a specific die?");
-            String singleroll = scanner.nextLine();
-            if(singleroll.toLowerCase().contains("n")){
-                break;
+            String single = scanner.nextLine();
+            if (single.toLowerCase().contains("y")) {
+                int choice = Input.getChoice();
+                cup.roll(rand,choice);
+                System.out.println(cup);
+//                continue;
             }
-            getChoice();
 
-
-
+            System.out.println("Would you like to re-roll multiple die?");
+            String multi = scanner.nextLine();
+            if (multi.toLowerCase().contains("y")) {
+                ArrayList<Integer> choices = Input.getChoices();
+                cup.roll(rand,choices);
+                System.out.println(cup);
+//                continue;
+            }
+            break;
         }
-
-
     }
+
+
 
     //TODO: add try catch add exceptions // parseInt
     static public int getChoice(){
@@ -59,11 +77,10 @@ public class Input {
 
     static public ArrayList<Integer> getChoices(){
         ArrayList<Integer> choices = new ArrayList<>();
-
-
         System.out.println("Choose numbers of dice to re-roll?");
         String input = scanner.nextLine();
         String[] inputArray = input.split(" ");
+        //TODO data validation replace method regex
         for (String number: inputArray){
             choices.add(Integer.parseInt(number) -1 );
         }

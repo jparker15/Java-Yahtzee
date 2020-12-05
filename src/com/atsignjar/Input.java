@@ -12,16 +12,11 @@ public class Input {
     protected static Random rand = new Random();
 
     static public void welcome(){
-
-        while(true){
             System.out.println("Welcome to Yahztee! \nWould you like to play?");
             String answer = scanner.nextLine();
             if(answer.toLowerCase().contains("n")){
-                break;
+                System.exit(0);
             }
-            Input.demo();
-        }
-
     }
 
     static public void demo(){
@@ -34,7 +29,7 @@ public class Input {
             String reroll = scanner.nextLine();
             if (reroll.toLowerCase().contains("y")) {
                 cup.roll(rand);
-                System.out.println(reroll);
+                System.out.println("Second Hand:");
 //                continue;
             }
             System.out.println(cup);

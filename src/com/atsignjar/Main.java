@@ -14,6 +14,7 @@ public class Main {
 
 
         Input.welcome();
+        Input.demo();
 //        cup.roll(rand);
 //        System.out.println(cup);
 ////        cup.roll(rand, Input.getChoices());

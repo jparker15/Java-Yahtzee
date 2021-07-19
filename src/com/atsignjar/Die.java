@@ -1,25 +1,21 @@
 package com.atsignjar;
 
-import java.util.Random;
-
 public class Die {
-    private int value;
-    private int sides;
+    public int value;
+    public int numOfSides;
 
     public Die (){
-        sides = 6;
-        value =1;
+        numOfSides = 6;
+
     }
 
-    public void roll (Random rand) {
-        this.value = rand.nextInt(sides) + 1; //1 - 6
+    public Die(int numOfSides){
+        this.numOfSides = numOfSides;
     }
 
-    public int getValue(){
-        return this.value;
+    public void roll () {
+        value = (int) ((Math.random() * numOfSides) + 1); //1 - 6
     }
-
-
 
 }
 
